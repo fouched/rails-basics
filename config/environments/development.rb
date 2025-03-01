@@ -34,7 +34,7 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
-  # Custom debug logging
+  # Custom development logging
   config.logger = Logger.new(STDOUT)
   config.logger = ActiveSupport::Logger.new("log/rails-basic.log")
   config.log_level = :debug
