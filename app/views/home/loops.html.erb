@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <h1>Products</h1>
+  </div>
+  <%#= debug @products %>
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table table-sm table-striped table-hover">
+        <thead>
+        <tr>
+          <td>ID</td>
+          <td>Name</td>
+          <td>Qty</td>
+        </tr>
+        </thead>
+        <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product[:productId] %></td>
+            <td><%= product[:productName] %></td>
+            <td><%= product[:quantity] %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

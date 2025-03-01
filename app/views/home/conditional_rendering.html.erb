@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table table-sm table-striped table-hover">
+        <thead>
+        <tr>
+          <td>Name</td>
+          <td>Is Visible</td>
+          <td>Is Logged In</td>
+          <td>Country Code</td>
+          <td>Work Experience</td>
+          <td>Province</td>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @data[:name] %></td>
+            <td><%= @data[:isVisible] %></td>
+            <td><%= @data[:loggedIn] %></td>
+            <td><%= @data[:countryCode] %></td>
+            <td><%= @data[:workExperience] %></td>
+            <td><%= @data[:province] %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <% if @data[:loggedIn] %>
+      <h1>Hi <%= @data[:name] %>! You are logged in!</h1>
+    <% else %>
+      <h1>You are just a guest! Please login.</h1>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <% if @data[:countryCode] === "ZA" %>
+      <h1>Go Springboks!</h1>
+    <% else %>
+      <h1>Ever consider immigrating to South Africa</h1>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <% if @data[:workExperience] < 5 %>
+      <h1>Your level is junior</h1>
+    <% elsif @data[:workExperience] === 5 %>
+      <h1>Your level is intermediate</h1>
+    <% else %>
+      <h1>Your level is senior</h1>
+    <% end %>
+  </div>
+
+</div>
