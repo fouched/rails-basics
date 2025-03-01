@@ -34,6 +34,16 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  # Custom debug logging
+  config.logger = Logger.new(STDOUT)
+  config.logger = ActiveSupport::Logger.new("log/rails-basic.log")
+  config.log_level = :debug
+  config.logger.datetime_format = "%Y-%m-%d %H:%M:%S"
+
+  config.logger.formatter = proc do | severity, time, progname, msg |
+    "#{time} #{severity} #{msg}\n"
+  end
+
   # Make template changes take effect immediately.
   config.action_mailer.perform_caching = false
 

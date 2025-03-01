@@ -1,0 +1,2 @@
+module LogdemoHelper
+end

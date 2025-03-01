@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   get "home/datetime" => "home#datetime"
   get "home/conditional" => "home#conditional_rendering"
   get "home/loops" => "home#loops"
+  get "logdemo" => "log_demo#index"
 end
