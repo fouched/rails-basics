@@ -28,6 +28,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actioncable (v8.0.1, ruby-3.3.7-p123) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailbox (v8.0.1, ruby-3.3.7-p123) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v8.0.1, ruby-3.3.7-p123) [gem]" level="application" />

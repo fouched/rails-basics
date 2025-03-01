@@ -2,6 +2,7 @@
   <div class="row">
 
     <div class="col-md-6">
+
       <h4>User Details</h4>
       <div class="card">
         <div class="card-header">
@@ -23,11 +24,16 @@
         <div class="card-footer">
           <%= link_to "Prev User", LoadUserDetails_path(params[:id].to_i-11), class: "btn btn-danger" %>
           <%= link_to "Next User", LoadUserDetails_path(params[:id].to_i+1), class: "btn btn-danger" %>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" value="" id="address-toggle"/>
+            <label id="lblShowHide" class="form-check-label" for="address">Show Address</label>
+          </div>
         </div>
       </div>
+
     </div>
 
-    <div class="col-md-6">
+    <div id="address-details" class="col-md-6 d-none">
       <h4 class="mt-4">Address Details</h4>
       <div class="card">
         <div class="card-header">
@@ -41,5 +47,25 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
+
+<!--<script>-->
+<!--    // to do it without jQuery - we must do below and use var, or turbo-rails has a fit-->
+<!--    var checkbox = document.getElementById('address');-->
+
+<!--    checkbox.addEventListener('change', () => {-->
+
+<!--        let addressDetails = document.getElementById('address-details');-->
+<!--        let lbl = document.getElementById("lblShowHide")-->
+
+<!--        if (checkbox.checked) {-->
+<!--            addressDetails.classList.remove("d-none")-->
+<!--            lbl.innerHTML = "Hide Address"-->
+<!--        } else {-->
+<!--            addressDetails.classList.add("d-none")-->
+<!--            lbl.innerHTML = "Show Address"-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
