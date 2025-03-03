@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   get "loadcards" => "rest_client#load_user_cards"
   get "loaduser/:id" => "rest_client#load_user_details", as: "LoadUserDetails" # use an alias
   get "showuser" => "rest_client#show_user_details"
+  get "employees" => "employees#index", as: "employees"
+  get "employee/:id" => "employees#show", as: "employee"
+  get "employee/edit/:id" => "employees#edit", as: "edit_employee"
 end

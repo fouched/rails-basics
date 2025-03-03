@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <h1>Employees</h1>
+  </div>
+  <% if @employees.present? %>
+    <div class="row mt-3">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @employees.each do |employee| %>
+            <tr>
+              <td><%= employee.id %></td>
+              <td><%= employee.firstname %></td>
+              <td><%= employee.lastname %></td>
+              <td><%= employee.phone %></td>
+              <td><%= employee.email %></td>
+              <td>
+                <a href="<%= employee_path(employee) %>">Details</a> |
+                <a href="<%= edit_employee_path(employee) %>">Edit</a> |
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>

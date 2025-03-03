@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <h1>Employee details</h1>
+  </div>
+  <div class="row">
+    <table class="table">
+      <tbody>
+      <tr>
+        <td>Employee ID</td>
+        <td><%= @employee.id %></td>
+      </tr>
+        <tr>
+          <td>First name</td>
+          <td><%= @employee.firstname %></td>
+        </tr>
+        <tr>
+          <td>Last name</td>
+          <td><%= @employee.lastname %></td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td><%= @employee.phone %></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><%= @employee.email %></td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td><%= @employee.gender %></td>
+        </tr>
+        <tr>
+          <td>Salary</td>
+          <td><%= @employee.salary %></td>
+        </tr>
+        <tr>
+          <td>Hire date</td>
+          <td><%= @employee.hiredate %></td>
+        </tr>
+        <tr>
+          <td>Birthdate</td>
+          <td><%= @employee.birthdate %></td>
+        </tr>
+        <tr>
+          <td>Has Passport</td>
+          <td><%= @employee.haspassport %></td>
+        </tr>
+        <tr>
+          <td>Notes</td>
+          <td><textarea rows="3" cols="50"><%= @employee.notes %></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row mt-3">
+    <a href="<%= employees_path %>">Back to list</a>
+  </div>
+</div>
