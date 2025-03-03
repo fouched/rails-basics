@@ -11,4 +11,23 @@ class EmployeesController < ApplicationController
   def edit
     @employee = Employee.find(params[:id])
   end
+
+  def update
+    @employee = Employee.find(params[:id])
+
+    if @employee.update(employee_params)
+      redirect_to employees_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+
+  end
+
+  def employee_params
+    params.require(:employee).permit(:firstname, :lastname, :phone, :email, :gender, :salary, :hiredate, :birthdate, :haspassport, :notes)
+  end
+
+
+
+
 end

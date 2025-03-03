@@ -17,12 +17,18 @@ Rails.application.routes.draw do
   get "home/datetime" => "home#datetime"
   get "home/conditional" => "home#conditional_rendering"
   get "home/loops" => "home#loops"
+
   get "logdemo" => "log_demo#index"
+
   get "loadusers" => "rest_client#load_users"
   get "loadcards" => "rest_client#load_user_cards"
   get "loaduser/:id" => "rest_client#load_user_details", as: "LoadUserDetails" # use an alias
   get "showuser" => "rest_client#show_user_details"
+
+  # we only do aliases for routes that can be triggered via a hyperlink
   get "employees" => "employees#index", as: "employees"
   get "employee/:id" => "employees#show", as: "employee"
   get "employee/edit/:id" => "employees#edit", as: "edit_employee"
+  patch "employee/:id" => "employees#update"
+
 end
