@@ -28,7 +28,11 @@ Rails.application.routes.draw do
   # we only do aliases for routes that can be triggered via a hyperlink
   get "employees" => "employees#index", as: "employees"
   get "employee/:id" => "employees#show", as: "employee"
+
   get "employee/edit/:id" => "employees#edit", as: "edit_employee"
   patch "employee/:id" => "employees#update"
+
+  get "employee/delete/:id" => "employees#delete", as: "delete_employee"
+  delete "employee/:id" => "employees#destroy"
 
 end
